@@ -1,26 +1,24 @@
-Name: Datadog Agent
+Name: datadog
 Cartridge-Short-Name: DATADOG
-Display-Name: Datadog Agent 4.0.1
-Version: "4.0.1"
-Versions: ["4.0.1"]
+Display-Name: Datadog Agent 4.1.0
+Version: "4.1.0"
+Versions: ["4.1.0"]
 Website: https://github.com/DataDog/datadog-openshift
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: datadog
 Categories:
   - embedded
 Provides:
-  - dd-agent-4.0.1
+  - dd-agent-4.1.0
   - "dd-agent"
-  - "dd-agent (version) = 4.0.1"
+  - "dd-agent (version) = 4.1.0"
 Scaling:
   Min: 1
   Max: -1
 Endpoints:
   - Private-IP-Name:   IP
-    Private-Port-Name: PORT
-    Private-Port:      8080
-    Public-Port-Name:  PROXY_PORT
-    Mappings:
-      - Frontend:      ""
-        Backend:       ""
-Install-Build-Required: true
+    Private-Port-Name: FORWARDER_PORT
+    Private-Port:      17123
+  - Private-IP-Name:   IP
+    Private-Port-Name: DOGSTATSD_PORT
+    Private-Port:      8125
