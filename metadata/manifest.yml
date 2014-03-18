@@ -5,7 +5,7 @@ Version: "4.0.1"
 Versions: ["4.0.1"]
 Website: https://github.com/DataDog/datadog-openshift
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: Datadog
+Cartridge-Vendor: datadog
 Categories:
   - embedded
 Provides:
