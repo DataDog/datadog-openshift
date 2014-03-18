@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function start {
+	sudo ~/.datadog-agent/bin/agent start
+}
+
+function stop {
+	sudo ~/.datadog-agent/bin/agent stop
+}
+
+function status {
+	sudo ~/.datadog-agent/bin/agent status
+}
+
+function restart {
+	sudo ~/.datadog-agent/bin/agent restart
+}
