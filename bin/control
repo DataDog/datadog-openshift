@@ -28,6 +28,12 @@ function restart() {
 	fi
 }
 
+function info() {
+	if [ -d "$OPENSHIFT_DATADOG_DIR/dd-agent/" ]
+	then $OPENSHIFT_DATADOG_DIR/dd-agent/bin/info
+	fi
+}
+
 function install() {
 	# Parameters
 	apikey=$1
@@ -548,6 +554,7 @@ case "$1" in
   stop)            stop ;;
   restart)         restart ;;
   status)          status ;;
+  info)          info ;;
   install)          install $2 ;;
   *)               exit 0
 esac
