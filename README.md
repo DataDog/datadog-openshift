@@ -42,6 +42,8 @@ If you have trouble connecting to your gear, read the documentation here: https:
     datadog/bin/control info
     ```
 
+5. You can start configuring your integrations to send metrics and events on Datadog. See here the list of the available integrations: https://app.datadoghq.com/account/settings.
+
 ### More information about the Datadog Agent
 
 See the detailed documentation on our website:
