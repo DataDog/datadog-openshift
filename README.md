@@ -4,7 +4,9 @@ The Datadog cartridge for Openshift will enable you to install the Datadog Agent
 
 Before adding the Datadog cartridge, make sure you have installed **python 2.6 or above** on your gear.
 
-1. Add the cartridge to your gear. If you are using the RHC client tool, you would use the following command: 
+1. Add the cartridge to your gear. The URL to the manifest you should use is: http://cartreflect-claytondev.rhcloud.com/github/datadog/datadog-openshift 
+  
+  If you are using the RHC client tool, you would run the following command to install the cartridge: 
   ```
   rhc cartridge-add http://cartreflect-claytondev.rhcloud.com/github/datadog/datadog-openshift -a myapp
   ```
