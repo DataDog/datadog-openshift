@@ -18,7 +18,6 @@ Group-Overrides:
   - components:
     - datadog
     - web_framework
-    - python
 Scaling:
   Min: 1
   Max: -1
