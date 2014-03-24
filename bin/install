@@ -504,5 +504,6 @@ if [ $apikey ]; then
 	sed -i "s/bind_host:.*/bind_host: $OPENSHIFT_DATADOG_IP/" $dd_base/agent/datadog.conf 2>> $logfile
 
 	else
+		# Generate an error to prevent the Cartridge from being added
 		exit "Error: no API key has been defined prior to installation"
 fi;
