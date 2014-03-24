@@ -1,28 +1,30 @@
-The Datadog cartridge for Openshift will enable you to install the Datadog Agent on your Openshift gears and start collect metrics from your different applications.
+## Datadog-OpenShift integration
+
+The Datadog cartridge for Openshift will enable you to install the Datadog Agent on your Openshift gears and start collect metrics from your different applications. This cartridge supports both scalable and non-scalable apps.
+
+### Requirements
+
+ * An OpenShift application with **python 2.6 or above** installed on it
+ * The OpenShift RHC client tool: https://www.openshift.com/get-started#cli
+ * A Datadog account: http://www.datadoghq.com
+
 
 ### How to install the Datadog cartridge
 
-Before adding the Datadog cartridge, make sure you have installed **python 2.6 or above** on your gear.
+1. Get your Datadog API key here https://app.datadoghq.com/account/settings#api and define the  'DATADOG_API_KEY' environment variable in your OpenShift application:
+  ```
+  rhc set-env DATADOG_API_KEY=your_api_key -a myapp
+  ``` 
 
-1. Add the cartridge to your gear. The URL to the manifest you should use is: http://cartreflect-claytondev.rhcloud.com/github/datadog/datadog-openshift 
-  
-  If you are using the RHC client tool, you would run the following command to install the cartridge: 
+2. Add the cartridge to your gear:
   ```
   rhc cartridge-add http://cartreflect-claytondev.rhcloud.com/github/datadog/datadog-openshift -a myapp
   ```
 
-2. ssh to your gear:
-  ```
-  ssh 532b190a5004463582000119@myapp.rhcloud.com
-  ```
-If you have trouble connecting to your gear, read the documentation here: https://www.openshift.com/developers/remote-access
+3. At this point, the Agent should now be running on your gear. You should see your host appear in the list on the "Infrastructure" page on Datadog. You can start configuring your integrations to send metrics and events on Datadog. See here the list of the available integrations with associated configuration instructions: https://app.datadoghq.com/account/settings.
 
-3. Get your Datadog API key here https://app.datadoghq.com/account/settings#api and then install the Agent by running the following command on your gear:
-  ```
-  datadog/bin/control install YOUR_API_KEY
-  ```
 
-4. The agent is now running on your gear. You can use several commands to work with the Agent:
+4. If you ssh to your gear, you can use several commands to work with the Agent:
   * Start the Agent
     ```
     datadog/bin/control start
@@ -44,7 +46,10 @@ If you have trouble connecting to your gear, read the documentation here: https:
     datadog/bin/control info
     ```
 
-5. You can start configuring your integrations to send metrics and events on Datadog. See here the list of the available integrations: https://app.datadoghq.com/account/settings.
+### Notes on scalable apps
+
+In the case of a scalable app, the Datadog Agent will be installed and configured automatically on every new gear created for scalibility purpose.
+
 
 ### More information about the Datadog Agent
 
