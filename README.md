@@ -46,7 +46,7 @@ The Datadog cartridge for Openshift will enable you to install the Datadog Agent
     datadog/bin/control info
     ```
 
-### Notes on scalable apps
+### Note on scalable apps
 
 In the case of a scalable app, the Datadog Agent will be installed and configured automatically on every new gear created for scalibility purpose.
 
