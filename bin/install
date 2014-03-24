@@ -498,6 +498,6 @@ if [ "$start_agent" = "1" ]; then
     wait $agent_pid
 fi; fi
 
-
+printf "Changing bind host: $OPENSHIFT_DATADOG_IP"
 sed -i "s/bind_host:.*/bind_host: $OPENSHIFT_DATADOG_IP/" $dd_base/agent/datadog.conf 2>> $logfile
 
