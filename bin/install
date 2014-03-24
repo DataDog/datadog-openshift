@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apikey="9863dbd9474b5589d36bca341d9f0703"
+apikey="$DATADOG_API_KEY"
 DD_HOME="$OPENSHIFT_DATADOG_DIR/dd-agent"
 DD_START_AGENT=0 # Do not start the agent when calling install_from_source()
 IS_OPENSHIFT=1 # Used to tell virtualenv to use the system variables
@@ -498,6 +498,6 @@ if [ "$start_agent" = "1" ]; then
     wait $agent_pid
 fi; fi
 
-printf "Changing bind host: $OPENSHIFT_DATADOG_IP"
+
 sed -i "s/bind_host:.*/bind_host: $OPENSHIFT_DATADOG_IP/" $dd_base/agent/datadog.conf 2>> $logfile
 
