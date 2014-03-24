@@ -14,6 +14,11 @@ Provides:
   - dd-agent-4.1.0
   - "dd-agent"
   - "dd-agent (version) = 4.1.0"
+Group-Overrides:
+  - components:
+    - datadog
+    - web_framework
+    - python
 Scaling:
   Min: 1
   Max: -1
