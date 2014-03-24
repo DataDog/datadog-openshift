@@ -28,3 +28,5 @@ Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: DOGSTATSD_PORT
     Private-Port:      8125
+Requires:
+  - python
