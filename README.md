@@ -24,7 +24,13 @@ The Datadog cartridge for Openshift will enable you to install the Datadog Agent
 3. At this point, the Agent should now be running on your gear. You should see your host appear in the list on the "Infrastructure" page on Datadog. You can start configuring your integrations to send metrics and events on Datadog. See here the list of the available integrations with associated configuration instructions: https://app.datadoghq.com/account/settings.
 
 
-4. If you ssh to your gear, you can use several commands to work with the Agent:
+4. Ssh to your gear to work with the agent:
+  ```
+  ssh XXXXXXXXX@myapp.rhcloud.com
+  ```
+If you have trouble connecting to your gear, read the documentation here: https://www.openshift.com/developers/remote-access
+
+  You can use several commands to interact with the Agent:
   * Start the Agent
     ```
     datadog/bin/control start
@@ -44,6 +50,11 @@ The Datadog cartridge for Openshift will enable you to install the Datadog Agent
   * Get detailed information about the Agent
     ```
     datadog/bin/control info
+    ```
+
+  Configuration files for the integrations are located here:
+    ```
+    cd datadog/dd-agent/agent/conf.d/
     ```
 
 ### Note on scalable apps
