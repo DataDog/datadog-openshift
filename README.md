@@ -4,7 +4,7 @@ The Datadog cartridge for Openshift will enable you to install the Datadog Agent
 
 ### Requirements
 
- * An OpenShift application with **python 2.6 or above** installed on it
+ * An OpenShift application
  * The OpenShift RHC client tool: https://www.openshift.com/get-started#cli
  * A Datadog account: http://www.datadoghq.com
 
