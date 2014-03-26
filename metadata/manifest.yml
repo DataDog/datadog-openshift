@@ -16,7 +16,7 @@ Provides:
   - "dd-agent (version) = 4.1.0"
 Group-Overrides:
   - components:
-    - python
+    - web_framework
     - datadog
 Scaling:
   Min: 1
@@ -28,5 +28,3 @@ Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: DOGSTATSD_PORT
     Private-Port:      8125
-Requires:
-  - python
