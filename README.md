@@ -33,28 +33,28 @@ If you have trouble connecting to your gear, read the documentation here: https:
   You can use several commands to interact with the Agent:
   * Start the Agent
     ```
-    datadog/bin/control start
+    $OPENSHIFT_DATADOG_DIR/bin/control start
     ```
   * Stop the Agent
     ```
-    datadog/bin/control stop
+    $OPENSHIFT_DATADOG_DIR/bin/control stop
     ```
   * Restart the Agent
     ```
-    datadog/bin/control restart
+    $OPENSHIFT_DATADOG_DIR/bin/control restart
     ```
   * Get the status of the Agent
     ```
-    datadog/bin/control status
+    $OPENSHIFT_DATADOG_DIR/bin/control status
     ```
   * Get detailed information about the Agent
     ```
-    datadog/bin/control info
+    $OPENSHIFT_DATADOG_DIR/bin/control info
     ```
 
   Configuration files for the integrations are located here:
     ```
-    cd datadog/dd-agent/agent/conf.d/
+    cd $OPENSHIFT_DATADOG_DIR/dd-agent/agent/conf.d/
     ```
 
 ### Note on scalable apps
