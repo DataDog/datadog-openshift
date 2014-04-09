@@ -10,7 +10,7 @@ if [ $apikey ]; then
 	DD_API_KEY=$apikey DD_HOME=$dd_home DD_START_AGENT=0 IS_OPENSHIFT=$is_openshift sh -c "$(curl -L http://dtdg.co/dd-agent-source)"
 	
 	# Set and uncomment bind_host parameter
-	sed -i "s/# bind_host:.*/bind_host: $OPENSHIFT_DATADOG_IP/" $dd_home/agent/datadog.conf 2>> $logfile
+	sed -i "s/# bind_host:.*/bind_host: $OPENSHIFT_DATADOG_IP/" $dd_home/agent/datadog.conf
 	
 else
 	# Generate an error to prevent the Cartridge from being added
