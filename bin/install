@@ -8,7 +8,7 @@ IS_OPENSHIFT=1 # Used to tell virtualenv to use the system variables
 if [ $apikey ]; then
 
 	# figure out where to pull from
-	tag="openshift-integration"
+	tag="4.2.1"
 
 	#######################
 	# Define some helpers #
