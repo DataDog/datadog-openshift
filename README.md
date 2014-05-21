@@ -4,7 +4,7 @@ The Datadog cartridge lets you install the Datadog Agent on your gears and colle
 
 ### Requirements
 
- * An OpenShift app
+ * An OpenShift app (with the ‘sysstat’ Linux package installed)
  * The OpenShift RHC [client tool](https://www.openshift.com/get-started#cli)
  * A [Datadog](http://www.datadoghq.com) account
 
