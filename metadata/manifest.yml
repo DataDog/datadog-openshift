@@ -1,8 +1,8 @@
 Name: datadog
 Cartridge-Short-Name: DATADOG
-Display-Name: Datadog Agent 4.3.0
-Version: "4.3.0"
-Versions: ["4.3.0"]
+Display-Name: Datadog Agent 5.0.0
+Version: "5.0.0"
+Versions: ["5.0.0"]
 Website: https://github.com/DataDog/datadog-openshift
 Cartridge-Version: 0.0.2
 Cartridge-Vendor: datadog
@@ -11,9 +11,9 @@ Categories:
   - plugin
 Provides:
   - datadog
-  - dd-agent-4.3.0
+  - dd-agent-5.0.0
   - "dd-agent"
-  - "dd-agent (version) = 4.3.0"
+  - "dd-agent (version) = 5.0.0"
 Group-Overrides:
   - components:
     - web_framework

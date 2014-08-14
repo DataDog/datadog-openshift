@@ -12,13 +12,11 @@ function stop() {
 	if [ -d "$OPENSHIFT_DATADOG_DIR/dd-agent/" ]
 	then
 		printf "Stopping the agent...\n"
-		
-		# Remove .pid and .sock files, they should not be there if the agent is not running
-		# but there is a weird behavior when the OpenShift app is put in "idle" state.
-	    	rm -f $OPENSHIFT_DATADOG_DIR/dd-agent/supervisord/*.sock
-                rm -f $OPENSHIFT_DATADOG_DIR/dd-agent/supervisord/*.pid	
-                
-		$OPENSHIFT_DATADOG_DIR/dd-agent/bin/agent stop
+		PIDFILE=$OPENSHIFT_DATADOG_DIR/dd-agent/supervisord/supervisord.pid
+		if [ -f $PIDFILE ]
+		then
+			kill -TERM `cat $PIDFILE`
+		fi
 	fi
 }
 
