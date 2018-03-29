@@ -1,3 +1,8 @@
+# Deprecatation notice
+
+This repository provides a Datadog cartridge for Openshift v2, which is EOL. This repository is thus deprecated, no further support will be provided.
+For Openshift v3 monitoring, see https://github.com/DataDog/datadog-agent/blob/8ba26c4f2512f2d185726013073c3ef08c47c021/Dockerfiles/agent/OPENSHIFT.md
+
 ## Monitoring Openshift with Datadog
 
 The Datadog cartridge lets you install the Datadog Agent on your gears and collect metrics from your apps. This cartridge supports both scalable and non-scalable apps.
